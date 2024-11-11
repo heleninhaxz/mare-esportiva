@@ -1,0 +1,138 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Logo */
+.logo {
+    position: relative; /* Necessário para o título ficar na frente */
+    background-image: url('restaurante.webp'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;  /* Faz a imagem cobrir toda a área do div */
+    background-position: center; /* Centraliza a imagem */
+    padding: 90px; /* Adiciona um espaçamento interno */
+    text-align: center; /* Garante que o texto fique centralizado */
+}
+
+/* Título */
+.logo h1 {
+    font-family: 'Arial', sans-serif; /* Pode alterar para outra fonte, se preferir */
+    font-size: 3rem; /* Tamanho maior para destacar */
+    font-weight: bold;
+    color: white; /* Cor do texto */
+    z-index: 2; /* Garante que o texto fique acima da imagem */
+    position: relative; /* Para garantir que fique acima do overlay */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque ao texto */
+}
+
+/* Overlay para escurecer a imagem de fundo */
+.logo::before {
+    content: ''; /* Cria o pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Escurece a imagem com um overlay preto semitransparente */
+    z-index: 1; /* Coloca o overlay acima da imagem, mas abaixo do conteúdo */
+}
+
+header {
+    background-color: #212121;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffab00;
+}
+
+/* Seções */
+section {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.sobre-container, .cardapio-container, .promocoes-container, .contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #212121;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #00aaff;
+}
+
+.cardapio-item {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardapio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffab00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
